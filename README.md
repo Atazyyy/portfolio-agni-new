@@ -1,32 +1,102 @@
-# React + TypeScript + Vite
+# Portfolio Agni
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Modern portfolio website built with React, TypeScript, Vite, and Framer Motion.
 
-Currently, two official plugins are available:
+## 🚀 Quick Start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Prerequisites
+- Node.js 18+ 
+- npm atau yarn
 
-## React Compiler
+### Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+# Clone repository
+git clone https://github.com/Atazyyy/portfolio-agni-new.git
+cd portfolio-agni-new
 
-## Expanding the Oxlint configuration
+# Install dependencies
+npm install
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+# Start development server
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Buka http://localhost:5173 di browser.
+
+### Build untuk Production
+
+```bash
+npm run build
+npm run preview
+```
+
+## 📁 Project Structure
+
+```
+portfolio-agni-new/
+├── public/              # Static assets (favicon, dll)
+├── src/
+│   ├── components/     # React components
+│   │   ├── layout/     # Navbar, Footer, Layout
+│   │   └── ui/        # Button, Card, Tag, Section, dll
+│   ├── pages/          # Page components
+│   ├── data/           # Project data
+│   ├── hooks/           # Custom React hooks
+│   ├── styles/         # CSS files
+│   ├── App.tsx          # Main App component
+│   └── main.tsx         # Entry point
+├── index.html
+├── package.json
+├── vite.config.ts
+└── tsconfig.json
+```
+
+## 🛠 Tech Stack
+
+- **Framework:** React 18
+- **Build Tool:** Vite
+- **Language:** TypeScript
+- **Routing:** React Router v6
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Styling:** CSS (CSS Variables, CSS Modules ready)
+
+## 📝 Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run linter |
+
+## 🌐 Deployment
+
+### Vercel (Recommended)
+
+1. Buka https://vercel.com/new
+2. Import repo `portfolio-agni-new`
+3. Klik Deploy
+
+### Manual Build
+
+```bash
+npm run build
+# Upload dist/ folder ke hosting
+```
+
+## ✨ Features
+
+- 🎨 Modern dark theme dengan glass morphism
+- 📱 Fully responsive design
+- 🎬 Smooth animations dengan Framer Motion
+- 🔗 Dynamic routing dengan React Router
+- 📊 Centralized project data management
+- 🎯 Type-safe dengan TypeScript
+
+## 👤 Author
+
+**Agni Miftah Fauzi**
+- GitHub: [@Atazyyy](https://github.com/Atazyyy)
+- Email: agnimiftahfauza@gmail.com
