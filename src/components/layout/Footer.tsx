@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Mail } from 'lucide-react';
 
 const GitHubIcon = () => (
@@ -16,7 +17,7 @@ const LinkedInIcon = () => (
 const socialLinks = [
   {
     name: 'GitHub',
-    url: 'https://github.com/agnimiftah',
+    url: 'https://github.com/Atazyyy',
     Icon: GitHubIcon,
   },
   {
@@ -44,31 +45,48 @@ export function Footer() {
 
   return (
     <footer className="footer">
+      <div className="footer-glow" />
       <div className="container">
         <div className="footer-content">
-          <Link to="/" className="footer-logo">
-            agni<span className="text-accent">.</span>dev
-          </Link>
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.2 }}
+          >
+            <Link to="/" className="footer-logo">
+              agni<span className="text-accent">.</span>dev
+            </Link>
+          </motion.div>
 
           <div className="footer-links">
             {footerLinks.map((link) => (
-              <Link key={link.path} to={link.path}>
-                {link.label}
-              </Link>
+              <motion.div
+                key={link.path}
+                whileHover={{ y: -2 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Link to={link.path}>
+                  {link.label}
+                </Link>
+              </motion.div>
             ))}
           </div>
 
           <div className="footer-social">
-            {socialLinks.map((link) => (
-              <a
+            {socialLinks.map((link, index) => (
+              <motion.a
                 key={link.name}
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -4, scale: 1.1 }}
               >
                 <link.Icon />
-              </a>
+              </motion.a>
             ))}
           </div>
 

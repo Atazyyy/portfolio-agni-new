@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { Layout } from './components/layout';
+import { InteractiveCursor } from './components/InteractiveCursor';
 import { Home, Projects, ProjectDetail, About, Experience, Contact } from './pages';
 
 // Styles
@@ -12,6 +13,7 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
+      <InteractiveCursor />
       <Layout>
         <AnimatePresence mode="wait">
           <Routes>
